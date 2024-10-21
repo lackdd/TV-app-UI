@@ -51,6 +51,9 @@ dependencies {
     implementation(libs.androidx.tv.material)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
+    // ExoPlayer and Media libraries for video playback
+    implementation("androidx.media3:media3-exoplayer:1.4.1") // Ensure correct formatting
+    implementation("androidx.media3:media3-ui:1.4.1")
     // Material and UI components
     implementation("androidx.compose.material:material:1.7.4")
     implementation("androidx.compose.ui:ui:1.7.4")
