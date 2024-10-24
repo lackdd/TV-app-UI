@@ -6,7 +6,8 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -29,9 +30,11 @@ fun ProgramList(programs: List<String>, videos: List<Uri>, images: List<Int>, on
                 Image(
                     painter = painterResource(id = images[index]),
                     contentDescription = "$program thumbnail",
-                    modifier = Modifier.size(150.dp)
-                        .clip(RoundedCornerShape(12.dp))
-                        .aspectRatio(1f),
+                    modifier = Modifier
+                        .width(250.dp)
+                        .height(140.dp)
+                        .clip(RoundedCornerShape(4.dp)),
+                        //.aspectRatio(1f),
                     contentScale = ContentScale.Crop
                 )
             }

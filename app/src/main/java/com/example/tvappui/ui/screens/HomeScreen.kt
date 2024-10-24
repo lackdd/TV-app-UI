@@ -19,17 +19,21 @@ import androidx.tv.material3.Text
 import com.example.tvappui.ui.components.ProgramList
 import com.example.tvappui.ui.components.NavigationBar
 import com.example.tvappui.R
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 
 @OptIn(ExperimentalTvMaterial3Api::class)
 @Composable
 fun HomeScreen(onProgramClick: (String, Uri) -> Unit) {
     val context = LocalContext.current
+    val scrollState = rememberScrollState()
     Box(modifier = Modifier.fillMaxSize()) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .verticalScroll(scrollState)
                 .background(Color(0xFF0E0E0F))
-                .padding(16.dp)
+                .padding(top = 100.dp, start = 16.dp, end = 16.dp)
                 .align(Alignment.TopStart)
         ) {
             /*Text(
@@ -43,37 +47,65 @@ fun HomeScreen(onProgramClick: (String, Uri) -> Unit) {
                 modifier = Modifier.padding(vertical = 8.dp)
             )
             ProgramList(
-                programs = listOf("Komissar Rex", "Troonide Mäng", "Dexter"),
+                programs = listOf("Sari 1", "Sari 2", "Sari 3", "Sari 4", "Sari 5", "Sari 6", "Sari 7", "Sari 8", "Sari 9", "Sari 10"),
                 videos = listOf(
-                    Uri.parse("android.resource://${context.packageName}/raw/rexv"),
-                    Uri.parse("android.resource://${context.packageName}/raw/rexv"),
-                    Uri.parse("android.resource://${context.packageName}/raw/rexv")
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2")
                 ),
                 images = listOf(
-                    R.drawable.rex,
-                    R.drawable.got,
-                    R.drawable.dex
+                    R.drawable.img1,
+                    R.drawable.img2,
+                    R.drawable.img3,
+                    R.drawable.img4,
+                    R.drawable.img5,
+                    R.drawable.img6,
+                    R.drawable.img7,
+                    R.drawable.img8,
+                    R.drawable.img9,
+                    R.drawable.img10
                 ),
                 onProgramClick = onProgramClick
             )
 
-            Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(12.dp))
             Text(
                 text = "Hiliseim",
                 color = Color(0xFFE8EAED),
                 modifier = Modifier.padding(vertical = 8.dp)
             )
             ProgramList(
-                programs = listOf("Stargate SG1", "Walking Dead", "Gray's anatomy"),
+                programs = listOf("Sari 11", "Sari 12", "Sari 13", "Sari 14", "Sari 15", "Sari 16", "Sari 17", "Sari 18", "Sari 19", "Sari 20"),
                 videos = listOf(
-                    Uri.parse("android.resource://${context.packageName}/raw/rexv"),
-                    Uri.parse("android.resource://${context.packageName}/raw/rexv"),
-                    Uri.parse("android.resource://${context.packageName}/raw/rexv")
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2")
                 ),
                 images = listOf(
-                    R.drawable.sg1,
-                    R.drawable.walk,
-                    R.drawable.gray
+                    R.drawable.img11,
+                    R.drawable.img12,
+                    R.drawable.img13,
+                    R.drawable.img14,
+                    R.drawable.img15,
+                    R.drawable.img16,
+                    R.drawable.img17,
+                    R.drawable.img18,
+                    R.drawable.img19,
+                    R.drawable.img20
                 ),
                 onProgramClick = onProgramClick
             )
