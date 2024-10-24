@@ -43,16 +43,16 @@ fun HomeScreen(onProgramClick: (String, Uri) -> Unit) {
                 modifier = Modifier.padding(vertical = 8.dp)
             )
             ProgramList(
-                programs = listOf("Komissar Rex", "Troonide Mäng", "Dexter"),
+                programs = listOf("Sari 1", "Sari 2", "Film 1"),
                 videos = listOf(
-                    Uri.parse("android.resource://${context.packageName}/raw/rexv"),
-                    Uri.parse("android.resource://${context.packageName}/raw/rexv"),
-                    Uri.parse("android.resource://${context.packageName}/raw/rexv")
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2")
                 ),
                 images = listOf(
-                    R.drawable.rex,
-                    R.drawable.got,
-                    R.drawable.dex
+                    R.drawable.one,
+                    R.drawable.two,
+                    R.drawable.three
                 ),
                 onProgramClick = onProgramClick
             )
@@ -64,16 +64,16 @@ fun HomeScreen(onProgramClick: (String, Uri) -> Unit) {
                 modifier = Modifier.padding(vertical = 8.dp)
             )
             ProgramList(
-                programs = listOf("Stargate SG1", "Walking Dead", "Gray's anatomy"),
+                programs = listOf("Film 2", "Sari 3", "Sari 4"),
                 videos = listOf(
-                    Uri.parse("android.resource://${context.packageName}/raw/rexv"),
-                    Uri.parse("android.resource://${context.packageName}/raw/rexv"),
-                    Uri.parse("android.resource://${context.packageName}/raw/rexv")
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2"),
+                    Uri.parse("android.resource://${context.packageName}/raw/vid2")
                 ),
                 images = listOf(
-                    R.drawable.sg1,
-                    R.drawable.walk,
-                    R.drawable.gray
+                    R.drawable.four,
+                    R.drawable.five,
+                    R.drawable.six
                 ),
                 onProgramClick = onProgramClick
             )
